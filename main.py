@@ -1,8 +1,12 @@
 from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from dotenv import load_dotenv
+import os
 
-TOKEN: Final = "7450986915:AAHmiCs_V5MLvqDKJl6dAcQFGPF3QxyQcfE"
+load_dotenv()
+
+TOKEN: Final = os.getenv("BOT_TOKEN")
 BOT_USERNAME : Final = "@SMUTOPIABOT"
 
 #Commands
@@ -11,8 +15,9 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Welcome to SMUTOPIA!!! What would you like to do?')
 
 async def scav_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-
     await update.message.reply_text('What is your group number?')
+
+    
 
 #Responses
 
@@ -24,16 +29,16 @@ def handle_response(text: str) -> str:
 
 async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
     message_type: str = update.message.chat.type
-    text: str =update.message.text
+    text: str = update.message.text
 
-    print(f'User ({update.message.chat.id}) in {message_type}: "{text}"')
+    print(f'User ({update.message.chat.id}),({update.message.chat.username}) in {message_type}: "{text}"')
 
-    if message_type == 'group':
+    if'group' in message_type:
         if BOT_USERNAME in text:
             new_text: str = text.replace(BOT_USERNAME, '').strip()
             response: str = handle_response(new_text)
         else:
-            return
+            return  
     else:
         response: str = handle_response(text)
 
