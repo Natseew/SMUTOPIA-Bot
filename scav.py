@@ -66,5 +66,12 @@ async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(response)
   
     if hunt_stopped:
-      hunt_stopped = False
-      await update.message.reply_text('The Hunt has ended. Please run /Hunt again if needed.')
+      if 'group' in message_type:
+        if BOT_USERNAME in text:
+          hunt_stopped = False
+          await update.message.reply_text('The Hunt has ended. Please run /Hunt again if needed.')
+        else:
+          return 
+      else:
+        hunt_stopped = False
+          await update.message.reply_text('The Hunt has ended. Please run /Hunt again if needed.')
