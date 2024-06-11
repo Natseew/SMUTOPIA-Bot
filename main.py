@@ -8,7 +8,11 @@ BOT_USERNAME : Final = "@SMUTOPIABOT"
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
-    await update.message.reply_text('Welcome to SMUTOPIA!!! Let us know your group number.')
+    await update.message.reply_text('Welcome to SMUTOPIA!!! What would you like to do?')
+
+async def scav_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+
+    await update.message.reply_text('What is your group number?')
 
 #Responses
 
@@ -46,6 +50,7 @@ if __name__ == '__main__':
 
     # Commands
     app.add_handler(CommandHandler('start', start_command))
+    app.add_handler(CommandHandler('hunt', scav_command))
 
     #Messages
     app.add_handler(MessageHandler(filters.TEXT, handle_message))
