@@ -9,5 +9,4 @@ Key in data for BOT_TOKEN
 # install process
 pip install python-telegram-bot --upgrade
 pip install python-dotenv
-pip install async-timer
 
