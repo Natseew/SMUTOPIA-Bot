@@ -1,0 +1,10 @@
+{
+	"AZU_1":{ 
+		"route" : "route_1",
+    "progress": ["start"]
+	},
+	"XOLO_1":{ 
+		"route" : "route_2",
+    "progress": ["start"]
+	}
+}

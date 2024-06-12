@@ -1,0 +1,8 @@
+{
+	"route_1":{ 
+		"route" : ["MPSH","SOE","SCIS I","SOA","CONNEX","Lib","SOL","SOSS","SOB","SSH","Cosy"]
+	},
+	"route_2":{ 
+		"route" : ["MPSH","SOSS","SOL","Lib","SOB","CONNEX","SOA","SSH","Cosy","SCIS I","SOE"]
+	}
+}
