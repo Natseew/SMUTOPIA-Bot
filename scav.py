@@ -1,12 +1,13 @@
-import time
 import asyncio
 import threading
+from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 #global Variables
 hunt_started = False
 hunt_stopped = False
+BOT_USERNAME : Final = "@SMUTOPIABOT"
 
 def startTimer(waitForSeconds):
     loop = asyncio.new_event_loop()
@@ -74,4 +75,4 @@ async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
           return 
       else:
         hunt_stopped = False
-          await update.message.reply_text('The Hunt has ended. Please run /Hunt again if needed.')
+        await update.message.reply_text('The Hunt has ended. Please run /Hunt again if needed.')

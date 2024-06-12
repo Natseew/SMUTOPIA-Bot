@@ -1,5 +1,8 @@
+from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+
+BOT_USERNAME : Final = "@SMUTOPIABOT"
 
 #lunch starting command
 async def lunch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
