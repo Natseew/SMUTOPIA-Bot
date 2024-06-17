@@ -63,13 +63,13 @@ def initialise_clan(clan: str) -> str:
       return "Please Key in password to start the scavenger hunt and get your first clue."
     else:
       if dic[clan]["progress"]:
-        return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.'
+        return clue_contents[dic[clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.'
       else: 
         return "Congratulations you have completed the Scavenger Hunt."
   else:
     return 'Unable to retrieve data.'
 
-def password_check(code: str) -> str:
+def password_check(code: str, sub_clan: str) -> str:
   doc = doc_ref.get()
   if doc.exists:
     dic = doc.to_dict()
@@ -94,14 +94,14 @@ def password_check(code: str) -> str:
 
 
 #Responses
-def handle_response_scav(text: str) -> str:
+def handle_response_scav(text: str, context: ContextTypes.DEFAULT_TYPE) -> str:
   try:
-    global sub_clan
+    user_data = context.user_data
     if text.upper() in ["AZU_1","XOLO_1","AZU_2","XOLO_2","ELIOS_1","ELIOS_2","IVIES_1","IVIES_2"]:
-      sub_clan = text.upper()
+      user_data["name"] = text.upper()
       return initialise_clan(text.upper())
     else:
-      return password_check(text)
+      return password_check(text, user_data.get("name"))
   except Exception as error:
     print("An exception occurred:", error)
     return 'An Error Occured. I do not understand your message.'
@@ -117,11 +117,11 @@ async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
       if 'group' in message_type:
           if BOT_USERNAME in text:
               new_text: str = text.replace(BOT_USERNAME, '').strip()
-              response: str = handle_response_scav(new_text)
+              response: str = handle_response_scav(new_text, context)
           else:
               return  
       else:
-          response: str = handle_response_scav(text)
+          response: str = handle_response_scav(text, context)
 
       print('Bot:', response)
       

@@ -3,7 +3,7 @@ import textwrap
 from dotenv import load_dotenv
 from typing import Final
 from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from telegram.ext import *
 
 
 
@@ -71,4 +71,4 @@ if __name__ == '__main__':
     #Errors
     app.add_error_handler(error)
     print('Polling...')
-    app.run_polling(poll_interval=3)
+    app.run_polling(poll_interval=3, allowed_updates=Update.ALL_TYPES)
