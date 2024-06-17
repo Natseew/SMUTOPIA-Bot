@@ -6,5 +6,30 @@
 	"XOLO_1":{ 
 		"route" : "route_2",
     "progress": ["start"]
+	},
+	"AZU_2":{ 
+		"route" : "route_3",
+    "progress": ["start"]
+	},
+	"XOLO_2":{ 
+		"route" : "route_4",
+    "progress": ["start"]
+	},
+	"ELIOS_1":{ 
+		"route" : "route_5",
+    "progress": ["start"]
+	},
+	"IVIES_1":{ 
+		"route" : "route_6",
+    "progress": ["start"]
+	},
+	"IVIES_2":{ 
+		"route" : "route_7",
+    "progress": ["start"]
+	},
+	"ELIOS_2":{ 
+		"route" : "route_8",
+    "progress": ["start"]
 	}
+	
 }

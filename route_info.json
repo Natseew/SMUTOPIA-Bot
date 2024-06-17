@@ -1,8 +1,26 @@
 {
 	"route_1":{ 
-		"route" : ["MPSH","SOE","SCIS I","SOA","CONNEX","Lib","SOL","SOSS","SOB","SSH","Cosy"]
+		"route" : ["MPSH","SOE","SCIS 1","SOA","CONNEX","KGC","SOL","SOSS","SOB","SSH","Cosy"]
 	},
 	"route_2":{ 
-		"route" : ["MPSH","SOSS","SOL","Lib","SOB","CONNEX","SOA","SSH","Cosy","SCIS I","SOE"]
+		"route" : ["MPSH","SOSS","SOL","KGC","SOB","CONNEX","SOA","SSH","Cosy","SCIS 1","SOE"]
+	},
+	"route_3":{ 
+		"route" : ["MPSH","LKS","SOE","SCIS 1","SSH","Cosy","SOB","CONNEX","SOA","SOL","SOSS"]
+	},
+	"route_4":{ 
+		"route" : ["MPSH","SSH","Cosy","SOB","SOL","SOSS","CONNEX","LKS","SCIS 1","SOE","SOA"]
+	},
+	"route_5":{ 	
+		"route" : ["MPSH","SCIS 1","SOB","SSH","Cosy","SOA","SOE","KGC","SOL","SOSS","CONNEX"]
+	},
+	"route_6":{ 
+		"route" : ["MPSH","CONNEX","SOSS","LKS","SOA","SSH","Cosy","SCIS 1","SOE","SOB","SOL"]
+	},
+	"route_7":{ 
+		"route" : ["MPSH","SOB","SOA","SOL","SOSS","SOE","SCIS 1","Cosy","SSH","CONNEX","LKS"]
+	},
+	"route_8":{ 
+		"route" : ["MPSH","SOA","KGC","SCIS 1","SOE","SOL","SOSS","SOB","CONNEX","Cosy","SSH"]
 	}
 }

@@ -19,6 +19,10 @@ doc_ref = db.collection("hunt").document("clan_info")
 with open("route_info.json", "r") as route:
 	route_contents = json.load(route)
 
+#initialize clue_info
+with open("clues.json", "r") as clues:
+	clue_contents = json.load(clues)
+
 #global Variables
 hunt_started = False
 hunt_stopped = False
@@ -45,8 +49,8 @@ async def stop_hunt():
 async def scav_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global hunt_started
     hunt_started = True
-    await update.message.reply_text('What is your group name?')
-    startTimer(20)
+    await update.message.reply_text('Key in your group name to start. eg.Azu_1')
+    startTimer(20000)
 
 #functions
 def initialise_clan(clan: str) -> str:
@@ -56,21 +60,51 @@ def initialise_clan(clan: str) -> str:
     if dic[clan]["progress"] == ['start']:
       dic[clan]["progress"] = route_contents[dic[clan]["route"]]["route"]
       doc_ref.set(dic)
-      return "Please Key to start the scavenger hunt and get your first clue."
+      return "Please Key in password to start the scavenger hunt and get your first clue."
     else:
-      return 'To continue hunt please key in the next password for the next clue.'
+      if dic[clan]["progress"]:
+        return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.'
+      else: 
+        return "Congratulations you have completed the Scavenger Hunt."
   else:
     return 'Unable to retrieve data.'
+
+def password_check(code: str) -> str:
+  doc = doc_ref.get()
+  if doc.exists:
+    dic = doc.to_dict()
+    if dic[sub_clan]["progress"]:
+      if clue_contents[dic[sub_clan]["progress"][0]]["code"] == code:
+        dic[sub_clan]["progress"].pop(0)
+        doc_ref.set(dic)
+        if dic[sub_clan]["progress"]:
+          return clue_contents[dic[sub_clan]["progress"][0]]["clue"]
+        else:
+          print(sub_clan)
+          return "Congratulations you have completed the Scavenger Hunt."
+      else:
+        return "Password Incorrect. Try Again."
+    else:
+      print(sub_clan)
+      return "Congratulations you have completed the Scavenger Hunt."
+  else:
+    return "Unable to retrieve data."
+  
+    
+
 
 #Responses
 def handle_response_scav(text: str) -> str:
   try:
-    if text.upper() in ["AZU_1","XOLO_1"]:
+    global sub_clan
+    if text.upper() in ["AZU_1","XOLO_1","AZU_2","XOLO_2","ELIOS_1","ELIOS_2","IVIES_1","IVIES_2"]:
+      sub_clan = text.upper()
       return initialise_clan(text.upper())
     else:
-      return 'Pass'
-  except:
-    return 'I do not understand your message.'
+      return password_check(text)
+  except Exception as error:
+    print("An exception occurred:", error)
+    return 'An Error Occured. I do not understand your message.'
 
 async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
     global hunt_stopped
