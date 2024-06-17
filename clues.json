@@ -1,51 +1,63 @@
 {
   "MPSH": {
     "code":"111111",
-    "clue": "Return to Origin."
+    "clue": "Return to Origin.",
+    "image":"./images/Connex.jpeg"
   },
   "SOL": {
     "code":"227318",
-    "clue":"Where precedents shape and debates ignite, Guess this place where rights take flight."
+    "clue":"Where precedents shape and debates ignite, Guess this place where rights take flight.",
+    "image":"./images/SOL.jpeg"
   },
   "SOB": {
     "code":"448002",
-    "clue":"Where future CEOs convene, the heart of commerce, sharp and keen."
+    "clue":"Where future CEOs convene, the heart of commerce, sharp and keen.",
+    "image":"./images/SOB.jpeg"
   },
   "SOE": {
     "code":"313632",
-    "clue":"Where supply meets demand, and trends take flight, Guess this place where economies unite."
+    "clue":"Where supply meets demand, and trends take flight, Guess this place where economies unite.",
+    "image":"./images/SOE_SCIS II.jpeg"
   },
   "SCIS 1": {
     "code":"488027",
-    "clue":"In a binary world where information flows in Streams, innovation is Crafted, bit by bit."
+    "clue":"In a binary world where information flows in Streams, innovation is Crafted, bit by bit.",
+    "image":"./images/SCIS_Ijpeg"
   },
   "SOSS": {
     "code":"610780",
-    "clue":"Where society's mysteries unfold, and stories of the world are told."
+    "clue":"Where society's mysteries unfold, and stories of the world are told.",
+    "image":"./images/SOSS_CIS.jpeg"
   },
   "SOA": {
     "code":"592806",
-    "clue":"Where precision meets financial flair, find the place where numbers are in the air."
+    "clue":"Where precision meets financial flair, find the place where numbers are in the air.",
+    "image":"./images/SOA.jpeg"
   },
   "CONNEX": {
     "code":"299475",
-    "clue":"A bridge between thoughts and minds, where connections and creativity bind."
+    "clue":"A bridge between thoughts and minds, where connections and creativity bind.",
+    "image":"./images/Connex.jpeg"
   },
   "LKS": {
     "code":"362251",
-    "clue":"A haven of knowledge vast and wide, where scholars and books peacefully reside. Seek the tower that touches the sky, where wisdom and learning amplify."
+    "clue":"A haven of knowledge vast and wide, where scholars and books peacefully reside. Seek the tower that touches the sky, where wisdom and learning amplify.",
+    "image":"./images/LKS_LIB.jpeg"
   },
   "KGC": {
     "code":"362541",
-    "clue":"Named for a guiding star of law, where legal minds find every clause. Seek the sanctuary of justice and order, where future lawyers cross the border."
+    "clue":"Named for a guiding star of law, where legal minds find every clause. Seek the sanctuary of justice and order, where future lawyers cross the border.",
+    "image":"./images/KGC_LIB.jpeg"
   },
   "Cosy": {
     "code":"548566",
-    "clue":"A place to unwind and relax, where comfort and tranquillity meets and make you feel like you're in heaven."
+    "clue":"A place to unwind and relax, where comfort and tranquillity meets and make you feel like you're in heaven.",
+    "image":"./images/COSY_HAVEN.jpeg"
   },
   "SSH": {
     "code":"601032",
-    "clue":"Where students find their needs met, support and services are set."
+    "clue":"Where students find their needs met, support and services are set.",
+    "image":"./images/SSH.jpeg"
   }
 }
 

@@ -60,14 +60,14 @@ def initialise_clan(clan: str) -> str:
     if dic[clan]["progress"] == ['start']:
       dic[clan]["progress"] = route_contents[dic[clan]["route"]]["route"]
       doc_ref.set(dic)
-      return "Please Key in password to start the scavenger hunt and get your first clue."
+      return "Please Key in password to start the scavenger hunt and get your first clue.", ""
     else:
       if dic[clan]["progress"]:
-        return clue_contents[dic[clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.'
+        return clue_contents[dic[clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.', clue_contents[dic[clan]["progress"][0]]["image"]
       else: 
-        return "Congratulations you have completed the Scavenger Hunt."
+        return "Congratulations you have completed the Scavenger Hunt.", ""
   else:
-    return 'Unable to retrieve data.'
+    return 'Unable to retrieve data.', ""
 
 def password_check(code: str, sub_clan: str) -> str:
   doc = doc_ref.get()
@@ -78,21 +78,18 @@ def password_check(code: str, sub_clan: str) -> str:
         dic[sub_clan]["progress"].pop(0)
         doc_ref.set(dic)
         if dic[sub_clan]["progress"]:
-          return clue_contents[dic[sub_clan]["progress"][0]]["clue"]
+          return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n Find the next station and retrieve the password to get your next clue.', clue_contents[dic[sub_clan]["progress"][0]]["image"]
         else:
           print(sub_clan)
-          return "Congratulations you have completed the Scavenger Hunt."
+          return "Congratulations you have completed the Scavenger Hunt.", ""
       else:
-        return "Password Incorrect. Try Again."
+        return "Password Incorrect. Try Again.", ""
     else:
       print(sub_clan)
-      return "Congratulations you have completed the Scavenger Hunt."
+      return "Congratulations you have completed the Scavenger Hunt.", ""
   else:
-    return "Unable to retrieve data."
+    return "Unable to retrieve data.", ""
   
-    
-
-
 #Responses
 def handle_response_scav(text: str, context: ContextTypes.DEFAULT_TYPE) -> str:
   try:
@@ -104,7 +101,7 @@ def handle_response_scav(text: str, context: ContextTypes.DEFAULT_TYPE) -> str:
       return password_check(text, user_data.get("name"))
   except Exception as error:
     print("An exception occurred:", error)
-    return 'An Error Occured. I do not understand your message.'
+    return 'An Error Occured. I do not understand your message.', ""
 
 async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
     global hunt_stopped
@@ -117,15 +114,19 @@ async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
       if 'group' in message_type:
           if BOT_USERNAME in text:
               new_text: str = text.replace(BOT_USERNAME, '').strip()
-              response: str = handle_response_scav(new_text, context)
+              response, image = handle_response_scav(new_text, context)
           else:
               return  
       else:
-          response: str = handle_response_scav(text, context)
+          response, image = handle_response_scav(text, context)
 
       print('Bot:', response)
       
       await update.message.reply_text(response)
+      if image:
+        chat_id = update.message.chat_id
+        photo_file = open(image, 'rb') 
+        await context.bot.send_photo(chat_id=chat_id, photo=photo_file)
   
     if hunt_stopped:
       if 'group' in message_type:
