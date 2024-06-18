@@ -27,7 +27,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     In this quest, you are tasked with a series of challenges located within different parts of the SMU Campus only. As you attempt to successfully complete these challenges, you will be rewarded with potions (points).
     
-    Any failure to complete any challenges will just result in no potions being awarded. The fastest subclan to finish this quest will be awarded with additional 500 potions. 
+    Any failure to complete any challenges will just result in no potions being awarded. The fastest subclan to finish this quest will be awarded with additional 100 potions. 
     
     Here’s how your quest will unfold:
     -   You will be on your own, as a subclan during this quest (No Mentors).
@@ -45,6 +45,8 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     -   Lib Quest: you only need to visit your assigned library, LKS or KGC, not both to complete a challenge as part of your quest.
     
     -   SSH/Cozy Haven: This is just a touch and go station.
+
+    -   Please send your message with (@SMUTOPIABOT) when submitting answers.
     
     Please pm @SUSannzz if you have any questions.
     Have Fun!!!
