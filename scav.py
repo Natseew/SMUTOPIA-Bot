@@ -75,18 +75,23 @@ def password_check(code: str, sub_clan: str) -> str:
     dic = doc.to_dict()
     if dic[sub_clan]["progress"]:
       if clue_contents[dic[sub_clan]["progress"][0]]["code"] == code:
-        dic[sub_clan]["progress"].pop(0)
+        curr = dic[sub_clan]["progress"].pop(0)
+        print()
+        print(f'{'\033[4m'}{'\033[1m'}subclan: {sub_clan}{'\033[0m'}')
+        print(f'{'\033[32m'}curr: {curr}{'\033[0m'}')
         doc_ref.set(dic)
         if dic[sub_clan]["progress"]:
+          print(f'{'\033[36m'}next station: {dic[sub_clan]["progress"][0]}{'\033[0m'}')
+          print()
           return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n Find the next station and retrieve the password to get your next clue.', clue_contents[dic[sub_clan]["progress"][0]]["image"]
         else:
           print(sub_clan)
-          return "Congratulations you have completed the Scavenger Hunt.", ""
+          return "Congratulations you have completed the Scavenger Hunt!", ""
       else:
         return "Password Incorrect. Try Again.", ""
     else:
       print(sub_clan)
-      return "Congratulations you have completed the Scavenger Hunt.", ""
+      return "Congratulations you have completed the Scavenger Hunt!", ""
   else:
     return "Unable to retrieve data.", ""
   
@@ -120,8 +125,7 @@ async def handle_message(update:Update, context: ContextTypes.DEFAULT_TYPE):
       else:
           response, image = handle_response_scav(text, context)
 
-      print('Bot:', response)
-      
+      print('Bot:', response)      
       await update.message.reply_text(response)
       if image:
         chat_id = update.message.chat_id
