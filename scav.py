@@ -99,7 +99,7 @@ def password_check(code: str, sub_clan: str) -> str:
 def handle_response_scav(text: str, context: ContextTypes.DEFAULT_TYPE) -> str:
   try:
     user_data = context.user_data
-    if text.upper() in ["AZU_1","XOLO_1","AZU_2","XOLO_2","ELIOS_1","ELIOS_2","IVIES_1","IVIES_2"]:
+    if any(clan in text.upper() for clan in ["AZU_","XOLO_","ELIOS_","IVIES_"]):
       user_data["name"] = text.upper()
       return initialise_clan(text.upper())
     else:
