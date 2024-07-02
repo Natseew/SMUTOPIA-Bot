@@ -1,33 +1,171 @@
 {
-	"AZU_1":{ 
+	"AZU_2":{ 
 		"route" : "route_1",
     "progress": ["start"]
 	},
-	"XOLO_1":{ 
+	"ELIOS_5":{ 
+		"route" : "route_1",
+    "progress": ["start"]
+	},
+	"IVIES_8":{ 
+		"route" : "route_1",
+    "progress": ["start"]
+	},
+	"XOLO_4":{ 
+		"route" : "route_1",
+    "progress": ["start"]
+	},
+	"AZU_9":{ 
+		"route" : "route_1",
+    "progress": ["start"]
+	},
+
+	"AZU_6":{ 
 		"route" : "route_2",
     "progress": ["start"]
 	},
-	"AZU_2":{ 
+	"ELIOS_1":{ 
+		"route" : "route_2",
+    "progress": ["start"]
+	},
+	"IVIES_3":{ 
+		"route" : "route_2",
+    "progress": ["start"]
+	},
+	"XOLO_7":{ 
+		"route" : "route_2",
+    "progress": ["start"]
+	},
+	"AZU_10":{ 
+		"route" : "route_2",
+    "progress": ["start"]
+	},
+
+	"AZU_1":{ 
+		"route" : "route_3",
+    "progress": ["start"]
+	},
+	"ELIOS_7":{ 
+		"route" : "route_3",
+    "progress": ["start"]
+	},
+	"IVIES_5":{ 
 		"route" : "route_3",
     "progress": ["start"]
 	},
 	"XOLO_2":{ 
+		"route" : "route_3",
+    "progress": ["start"]
+	},
+	"ELIOS_9":{ 
+		"route" : "route_3",
+    "progress": ["start"]
+	},
+
+
+
+	"AZU_8":{ 
 		"route" : "route_4",
     "progress": ["start"]
 	},
-	"ELIOS_1":{ 
+	"ELIOS_4":{ 
+		"route" : "route_4",
+    "progress": ["start"]
+	},
+	"IVIES_6":{ 
+		"route" : "route_4",
+    "progress": ["start"]
+	},
+	"XOLO_3":{ 
+		"route" : "route_4",
+    "progress": ["start"]
+	},
+	"ELIOS_10":{ 
+		"route" : "route_4",
+    "progress": ["start"]
+	},
+
+	"AZU_4":{ 
+		"route" : "route_5",
+    "progress": ["start"]
+	},
+	"ELIOS_8":{ 
 		"route" : "route_5",
     "progress": ["start"]
 	},
 	"IVIES_1":{ 
+		"route" : "route_5",
+    "progress": ["start"]
+	},
+	"XOLO_6":{ 
+		"route" : "route_5",
+    "progress": ["start"]
+	},
+	"IVIES_9":{ 
+		"route" : "route_5",
+    "progress": ["start"]
+	},
+
+
+	"AZU_5":{ 
 		"route" : "route_6",
     "progress": ["start"]
 	},
-	"IVIES_2":{ 
+	"ELIOS_2":{ 
+		"route" : "route_6",
+    "progress": ["start"]
+	},
+	"IVIES_7":{ 
+		"route" : "route_6",
+    "progress": ["start"]
+	},
+	"XOLO_8":{ 
+		"route" : "route_6",
+    "progress": ["start"]
+	},
+	"IVIES_10":{ 
+		"route" : "route_6",
+    "progress": ["start"]
+	},
+
+	"AZU_3":{ 
 		"route" : "route_7",
     "progress": ["start"]
 	},
-	"ELIOS_2":{ 
+	"ELIOS_6":{ 
+		"route" : "route_7",
+    "progress": ["start"]
+	},
+	"IVIES_4":{ 
+		"route" : "route_7",
+    "progress": ["start"]
+	},
+	"XOLO_1":{ 
+		"route" : "route_7",
+    "progress": ["start"]
+	},
+	"XOLO_9":{ 
+		"route" : "route_7",
+    "progress": ["start"]
+	},
+
+	"AZU_7":{ 
+		"route" : "route_8",
+    "progress": ["start"]
+	},
+	"ELIOS_3":{ 
+		"route" : "route_8",
+    "progress": ["start"]
+	},
+	"IVIES_2":{ 
+		"route" : "route_8",
+    "progress": ["start"]
+	},
+	"XOLO_5":{ 
+		"route" : "route_8",
+    "progress": ["start"]
+	},
+	"XOLO_10":{ 
 		"route" : "route_8",
     "progress": ["start"]
 	}
