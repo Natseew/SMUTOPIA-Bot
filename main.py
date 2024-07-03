@@ -20,7 +20,8 @@ BOT_USERNAME : Final = "@SMUTOPIABOT"
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.message.chat_id
     await update.message.reply_text("Welcome to SMUtopia, a realm where nature and magic entwine around the majestic World Tree. But peril looms – the Tree fades, poisoned by darkness. You, esteemed adventurers, are our chosen champions, embarking on the legendary Heroes Quest. Guided by wise Mentors (Facis) and challenged by Gatekeepers (Game Masters), your journey will test your courage and forge friendships. Embrace the adventure, uphold our CIRCLE values, and save our beloved land. Are you ready for the challenge?")
-    await context.bot.send_photo(chat_id=chat_id, photo="./images/campus-map.jpeg")
+    await context.bot.send_photo(chat_id=chat_id, photo="./images/campus-map.jpg")
+    await update.message.reply_text("More details on SMU Map: https://maps.smu.edu.sg/")
     await update.message.reply_text("Click on /help to get instructions.")
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -46,7 +47,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     -   Lib Quest: you only need to visit your assigned library, LKS or KGC, not both to complete a challenge as part of your quest.
     
-    -   COmpletion: You will have completed the quest once the Bot congratulates you on your completion. Upon completion contact your facilitators who will bring you to your next location.
+    -   Completion: You will have completed the quest once the Bot congratulates you on your completion. Upon completion contact your facilitators who will bring you to your next location.
 
     -   Please send your message with (@SMUTOPIABOT) when submitting answers.
     

@@ -25,7 +25,7 @@ async def lunch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
   reply_markup = InlineKeyboardMarkup(keyboard)
 
-  await update.message.reply_text("Please choose:", reply_markup=reply_markup)
+  await update.message.reply_text("Which Day of FO would you like to check?", reply_markup=reply_markup)
 
 #Responses
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -36,4 +36,4 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
   # Some clients may have trouble otherwise. See https://core.telegram.org/bots/api#callbackquery
   await query.answer()
 
-  await query.edit_message_text(text=f"Selected option: " + menu_contents[{query.data}])
+  await query.edit_message_text(text=f"The lunch for {query.data} is " + menu_contents[query.data] )

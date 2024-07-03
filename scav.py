@@ -1,6 +1,7 @@
 import asyncio
 import threading
 from typing import Final
+from datetime import datetime
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
@@ -64,7 +65,7 @@ def initialise_clan(clan: str) -> str:
     else:
       if dic[clan]["progress"]:
         return clue_contents[dic[clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.', clue_contents[dic[clan]["progress"][0]]["image"]
-      else: 
+      else:
         return "Congratulations you have completed the Scavenger Hunt.", ""
   else:
     return 'Unable to retrieve data.', ""
@@ -77,7 +78,7 @@ def password_check(code: str, sub_clan: str) -> str:
       if clue_contents[dic[sub_clan]["progress"][0]]["code"] == code:
         curr = dic[sub_clan]["progress"].pop(0)
         print()
-        print(f'{'\033[4m'}{'\033[1m'}subclan: {sub_clan}{'\033[0m'}')
+        print(f'{'\033[4m'}{'\033[1m'}subclan: {sub_clan}{'\033[0m'} ' + datetime.now().strftime("%H:%M:%S"))
         print(f'{'\033[32m'}curr: {curr}{'\033[0m'}')
         doc_ref.set(dic)
         if dic[sub_clan]["progress"]:
@@ -85,12 +86,12 @@ def password_check(code: str, sub_clan: str) -> str:
           print()
           return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n Find the next station and retrieve the password to get your next clue.', clue_contents[dic[sub_clan]["progress"][0]]["image"]
         else:
-          print(sub_clan)
+          print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
           return "Congratulations you have completed the Scavenger Hunt!", ""
       else:
         return "Password Incorrect. Try Again.", ""
     else:
-      print(sub_clan)
+      print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
       return "Congratulations you have completed the Scavenger Hunt!", ""
   else:
     return "Unable to retrieve data.", ""
