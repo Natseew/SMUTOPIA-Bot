@@ -1,8 +1,8 @@
 {
   "MPSH": {
     "code":"111111",
-    "clue": "Return to Origin.",
-    "image":"./images/CONNEX.jpeg"
+    "clue": "Please Key in the starting Password to start game.",
+    "image":"./images/capy.jpg"
   },
   "SOL": {
     "code":"227318",
@@ -15,7 +15,7 @@
     "image":"./images/SOB.jpeg"
   },
   "SOE": {
-    "code":"313632",
+    "code":"  ",
     "clue":"Where supply meets demand, and trends take flight, Guess this place where economies unite.",
     "image":"./images/SOE_SCIS II.jpeg"
   },

@@ -19,7 +19,7 @@ BOT_USERNAME : Final = "@SMUTOPIABOT"
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.message.chat_id
-    await update.message.reply_text("Welcome to SMUtopia, a realm where nature and magic entwine around the majestic World Tree. But peril looms – the Tree fades, poisoned by darkness. You, esteemed adventurers, are our chosen champions, embarking on the legendary Heroes Quest. Guided by wise Mentors (Facis) and challenged by Gatekeepers (Game Masters), your journey will test your courage and forge friendships. Embrace the adventure, uphold our CIRCLE values, and save our beloved land. Are you ready for the challenge?")
+    await update.message.reply_text("Welcome to SMUtopia, a realm where nature and magic entwine around the majestic World Tree. But peril looms – the Tree fades, poisoned by darkness. You, esteemed adventurers, are our chosen champions, embarking on the legendary Heroes Quest. Challenged by Gatekeepers (Game Masters), your journey will test your courage and forge friendships as you tour the campus completing your challenges. Embrace the adventure, uphold our CIRCLE values, and save our beloved land. Are you ready for the challenge?")
     await context.bot.send_photo(chat_id=chat_id, photo="./images/campus-map.jpg")
     await update.message.reply_text("More details on SMU Map: https://maps.smu.edu.sg/")
     await update.message.reply_text("Click on /help to get instructions.")
@@ -28,9 +28,15 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(textwrap.dedent("""
     Instructions:
     
-    In this quest, you are tasked with a series of challenges located within different parts of the SMU Campus only. As you attempt to successfully complete these challenges, you will be rewarded with potions (points).
+    In this quest, you are tasked with a series of challenges located within different parts of the SMU Campus only. 
     
-    Any failure to complete any challenges will just result in no potions being awarded. The fastest subclan to finish this quest will be awarded with additional potions. 
+    As you attempt to successfully complete these challenges, you will be rewarded with 10 potions (points) for each challenge.
+    
+    Failure to pass any challenges will just result in no potions being awarded. 
+    
+    The fastest subclan to finish this quest will be awarded with additional 300 potions, second will be awarded 200 potions and third will be awarded 100 potions. 
+    
+    You MUST finish the quest before 4.15pm, else your subclan will be poisoned with 500 points (deduction of 500 points)!!
     
     Here’s how your quest will unfold:
     -   You will be on your own, as a subclan during this quest (No Mentors).

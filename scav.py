@@ -66,7 +66,7 @@ def initialise_clan(clan: str) -> str:
       if dic[clan]["progress"]:
         return clue_contents[dic[clan]["progress"][0]]["clue"] + '\n \n To continue hunt please key in the next password to get your next clue.', clue_contents[dic[clan]["progress"][0]]["image"]
       else:
-        return "Congratulations you have completed the Scavenger Hunt.", ""
+        return "Congratulations on completing the Heroes Quest! Your Guardian Spirits thanks you for your bravery! Please DO NOT LEAVE your last station. Update your FACI that you have completed your quest and they will come and pick you up from your location shortly, Thank you!", ""
   else:
     return 'Unable to retrieve data.', ""
 
@@ -87,12 +87,12 @@ def password_check(code: str, sub_clan: str) -> str:
           return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n Find the next station and retrieve the password to get your next clue.', clue_contents[dic[sub_clan]["progress"][0]]["image"]
         else:
           print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
-          return "Congratulations you have completed the Scavenger Hunt!", ""
+          return "Congratulations on completing the Heroes Quest! Your Guardian Spirits thanks you for your bravery! Please DO NOT LEAVE your last station. Update your FACI that you have completed your quest and they will come and pick you up from your location shortly, Thank you!", ""
       else:
         return "Password Incorrect. Try Again.", ""
     else:
       print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
-      return "Congratulations you have completed the Scavenger Hunt!", ""
+      return "Congratulations on completing the Heroes Quest! Your Guardian Spirits thanks you for your bravery! Please DO NOT LEAVE your last station. Update your FACI that you have completed your quest and they will come and pick you up from your location shortly, Thank you!", ""
   else:
     return "Unable to retrieve data.", ""
   
