@@ -43,7 +43,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     -   The same phone have to be used to communicate with the bot throughout the quest.
 
-    -   Duration: You have a maximum of 2 hours 30 minutes to complete the quest, the faster the better.
+    -   Duration: You have a maximum of 2 hours 30 minutes (until 4.15pm) to complete the quest, the faster the better.
 
     -   Guidance: Each SC will use the clue given at every station by the gatekeepers to reveal the clue to their next destination via this bot. Use the provided school map and photo references to verify each location.
 
@@ -51,10 +51,6 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     -   Attendance: Follow your OWN route and visit ALL locations. Attendance will be taken.
     
-    -   Lib Quest: you only need to visit your assigned library, LKS or KGC, not both to complete a challenge as part of your quest.
-    
-    -   Completion: You will have completed the quest once the Bot congratulates you on your completion. Upon completion contact your facilitators who will bring you to your next location.
-
     -   Please send your message with (@SMUTOPIABOT) when submitting answers.
     
     Please pm @SUSannzz if you have any questions.
