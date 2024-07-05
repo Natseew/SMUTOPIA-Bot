@@ -15,18 +15,18 @@
     "image":"./images/SOB.jpeg"
   },
   "SOE": {
-    "code":"  ",
+    "code":"313632",
     "clue":"Where supply meets demand, and trends take flight, Guess this place where economies unite.",
     "image":"./images/SOE_SCIS II.jpeg"
   },
   "SCIS 1": {
     "code":"488027",
-    "clue":"In a binary world where information flows in Streams, innovation is Crafted, bit by bit.",
+    "clue":"In a binary world where information flows in Streams, innovation is Crafted, bit by bit (hint: Near SMU Gym)",
     "image":"./images/SCIS_I.jpeg"
   },
   "SOSS": {
     "code":"610780",
-    "clue":"Where society's mysteries unfold, and stories of the world are told.",
+    "clue":"Where society's mysteries unfold, and stories of the world are told. (Hint: Behind School of Law)",
     "image":"./images/SOSS_CIS.jpeg"
   },
   "SOA": {
@@ -41,22 +41,22 @@
   },
   "LKS": {
     "code":"362251",
-    "clue":"A haven of knowledge vast and wide, where scholars and books peacefully reside. Seek the tower that touches the sky, where wisdom and learning amplify.",
+    "clue":"A haven of knowledge vast and wide, where scholars and books peacefully reside. Seek the tower that touches the sky, where wisdom and learning amplify. (Hint: Near 1983) For this quest: 1 member of the group has to download the 'GameLead' app and register using their official SMU Email address and input Clan name (ie: Azu 1) in the Name field. A verification email will then be sent to your SMU email. Once verified, return to the app and log in BEFORE going to the station.",
     "image":"./images/LKS_LIB.jpeg"
   },
   "KGC": {
     "code":"362541",
-    "clue":"Named for a guiding star of law, where legal minds find every clause. Seek the sanctuary of justice and order, where future lawyers cross the border.",
+    "clue":"Named for a guiding star of law, where legal minds find every clause. Seek the sanctuary of justice and order, where future lawyers cross the border (Hint: It's a library) For this quest: 1 member of the group has to download the 'GameLead' app and register using their official SMU Email address and input Clan name (ie: Azu 1) in the Name field. A verification email will then be sent to your SMU email. Once verified, return to the app and log in BEFORE going to the station.",
     "image":"./images/KGC_LIB.jpeg"
   },
   "Cosy": {
     "code":"548566",
-    "clue":"A place to unwind and relax, where comfort and tranquillity meets and make you feel like you're in heaven.",
+    "clue":"A place to unwind and relax, where comfort and tranquillity meets and make you feel like you're in heaven. (hint: Near Koufu)",
     "image":"./images/COSY_HAVEN.jpeg"
   },
   "SSH": {
     "code":"601032",
-    "clue":"Where students find their needs met, support and services are set.",
+    "clue":"Where students find their needs met, support and services are set. (Hint: Near SOA Basement lift)",
     "image":"./images/SSH.jpeg"
   }
 }

@@ -86,12 +86,14 @@ def password_check(code: str, sub_clan: str) -> str:
           print()
           return clue_contents[dic[sub_clan]["progress"][0]]["clue"] + '\n \n Find the next station and retrieve the password to get your next clue.', clue_contents[dic[sub_clan]["progress"][0]]["image"]
         else:
-          print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
+          print(f'{'\033[31m'}{sub_clan} completed at {datetime.now().strftime("%H:%M:%S")}{'\033[0m'}')
+          # print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
           return "Congratulations on completing the Heroes Quest! Your Guardian Spirits thanks you for your bravery! Please DO NOT LEAVE your last station. Update your FACI that you have completed your quest and they will come and pick you up from your location shortly, Thank you!", ""
       else:
         return "Password Incorrect. Try Again.", ""
     else:
-      print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
+      print(f'{'\033[31m'}{sub_clan} completed at {datetime.now().strftime("%H:%M:%S")}{'\033[0m'}')
+      # print(sub_clan + " completed at " + datetime.now().strftime("%H:%M:%S") )
       return "Congratulations on completing the Heroes Quest! Your Guardian Spirits thanks you for your bravery! Please DO NOT LEAVE your last station. Update your FACI that you have completed your quest and they will come and pick you up from your location shortly, Thank you!", ""
   else:
     return "Unable to retrieve data.", ""
